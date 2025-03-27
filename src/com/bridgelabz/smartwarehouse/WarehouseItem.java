@@ -1,10 +1,16 @@
 package com.bridgelabz.smartwarehouse;
 
 abstract class WarehouseItem {
+    private String itemId;
     private String itemName;
 
-    public WarehouseItem(String itemName) {
+    public WarehouseItem(String itemId, String itemName) {
+        this.itemId = itemId;
         this.itemName = itemName;
+    }
+
+    public String getItemId() {
+        return itemId;
     }
 
     public String getItemName() {
@@ -13,13 +19,13 @@ abstract class WarehouseItem {
 
     @Override
     public String toString() {
-        return "Item: " + itemName;
+        return "Item ID: " + getItemId() + ", Item Name: " + getItemName();
     }
 }
 
 class Electronics extends WarehouseItem {
-    public Electronics(String name) {
-        super(name);
+    public Electronics(String itemId, String itemName) {
+        super(itemId, itemName);
     }
 
     @Override
@@ -29,8 +35,8 @@ class Electronics extends WarehouseItem {
 }
 
 class Groceries extends WarehouseItem {
-    public Groceries(String name) {
-        super(name);
+    public Groceries(String itemId, String itemName) {
+        super(itemId, itemName);
     }
 
     @Override
@@ -40,8 +46,8 @@ class Groceries extends WarehouseItem {
 }
 
 class Furniture extends WarehouseItem {
-    public Furniture(String name) {
-        super(name);
+    public Furniture(String itemId, String itemName) {
+        super(itemId, itemName);
     }
 
     @Override
