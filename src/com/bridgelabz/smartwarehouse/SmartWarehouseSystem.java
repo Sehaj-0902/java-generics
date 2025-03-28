@@ -46,6 +46,5 @@ public class SmartWarehouseSystem {
 
         System.out.println("\nFurniture Storage after removal:");
         displayAllItems(furnitureStorage.getItems());
-
     }
 }
